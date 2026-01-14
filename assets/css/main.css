@@ -2454,3 +2454,49 @@ section,
 .section{
   padding: clamp(56px, 7vw, 96px) 0;
 }
+
+
+/* Pricing V2 - ajustes para 4 planos (layout claro) */
+.pricing-v2 .pricing-grid{
+  max-width: 1320px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.pricing-v2 .pricing-card.featured{
+  transform: scale(1.03); /* menor que 1.05 pra não “estourar” com 4 cards */
+}
+
+.pricing-v2 .pricing-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.pricing-v2 .pricing-pill{
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  white-space: nowrap;
+}
+
+.pricing-v2 .pill-entry{ border-color: color-mix(in srgb, var(--accent-color), transparent 70%); }
+.pricing-v2 .pill-best{ border-color: color-mix(in srgb, var(--accent-color), transparent 60%); }
+.pricing-v2 .pill-scale{ border-color: color-mix(in srgb, #f59e0b, transparent 65%); }
+.pricing-v2 .pill-enterprise{ border-color: color-mix(in srgb, #111827, transparent 70%); }
+
+.pricing-v2 .pricing-price.quote{
+  font-size: 2.1rem;
+  line-height: 1.1;
+}
+
+.pricing-v2 .pricing-summary{
+  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+}
