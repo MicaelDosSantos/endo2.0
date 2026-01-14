@@ -25,7 +25,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #040677;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1acc8d;
+  --accent-color: #8b5cf6;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -37,7 +37,7 @@
 :root {
   --nav-color: #ffffff;
   /* The default color of the main navmenu links */
-  --nav-hover-color: #1acc8d;
+  --nav-hover-color: #8b5cf6;
   /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff;
   /* Used as the background color for mobile navigation menu */
@@ -45,7 +45,7 @@
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444;
   /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #1acc8d;
+  --nav-dropdown-hover-color: #8b5cf6;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -57,10 +57,10 @@
 }
 
 .dark-background {
-  --background-color: #08005e;
+  --background-color: #2c2766;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #0c0091;
+  --surface-color: #7d76c2;
   --contrast-color: #ffffff;
 }
 
@@ -114,7 +114,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #8b5cf6;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -182,13 +182,13 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px #2c2766;
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #10058c;
+  --background-color: #2c2766;
 }
 
 /*--------------------------------------------------------------
@@ -2126,3 +2126,124 @@ section,
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
 }
+
+/* ================================
+   Hero – Refinamento Visual EndoFlow
+   ================================ */
+
+.hero .hero-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: #e5e7eb;
+}
+
+.hero .hero-title span {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .hero-title strong {
+  color: #22c55e; /* verde semântico: resultado */
+  font-weight: 800;
+}
+
+.hero .hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 520px;
+  margin-bottom: 2.2rem;
+}
+
+/* CTA */
+.hero .hero-cta {
+  margin-top: 1rem;
+}
+
+.hero .btn-get-started {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 14px 34px;
+  font-weight: 600;
+  box-shadow: 0 14px 35px rgba(139, 92, 246, 0.45);
+  transition: all 0.3s ease;
+}
+
+.hero .btn-get-started:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.55);
+}
+
+.hero .btn-watch-video {
+  margin-left: 10px;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero .btn-watch-video i {
+  font-size: 28px;
+}
+
+/* Imagem */
+.hero .hero-img {
+  transform: translateY(-20px);
+}
+
+.hero .hero-img img {
+  filter: saturate(0.9);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero .hero-title {
+    font-size: 2.6rem;
+  }
+}
+
+/* .hero {
+  background: radial-gradient(
+      1200px circle at 10% 20%,
+      rgba(139, 92, 246, 0.25),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #0b0b3a 0%,
+      #1a1363 45%,
+      #24146e 100%
+    );
+} */
+
+/* ================================
+   HERO BACKGROUND – ENDOFLOW
+   ================================ */
+
+.hero-endoflow {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      600px circle at 15% 20%,
+      rgba(139, 92, 246, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      500px circle at 85% 10%,
+      rgba(99, 102, 241, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #0b0b3a 0%,
+      #1a1363 45%,
+      #24146e 100%
+    );
+}
+
+
+.hero:before {
+  background: color-mix(in srgb, var(--background-color), transparent 10%);
+}
+
