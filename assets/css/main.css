@@ -2500,3 +2500,44 @@ section,
   font-size: 0.95rem;
   color: color-mix(in srgb, var(--default-color), transparent 35%);
 }
+
+.navmenu .nav-login {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.navmenu .btn-nav-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: var(--accent-color);
+  background: transparent;
+  font-weight: 600;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+
+.navmenu .btn-nav-login:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 5%);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1199px) {
+  .navmenu .nav-login,
+  .navmenu .nav-cta {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .navmenu .btn-nav-login,
+  .navmenu .btn-nav-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
