@@ -2753,3 +2753,181 @@ section,
   border: 1px solid rgba(15, 23, 42, 0.14) !important;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
 }
+
+/* =========================
+   Testimonials (SaaS Light)
+========================= */
+
+.testimonials-saas-light{
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8ff 100%);
+  position: relative;
+}
+
+.testimonials-saas-light .saas-heading{
+  text-align:center;
+  max-width: 720px;
+  margin: 0 auto 18px auto;
+}
+
+.testimonials-saas-light .saas-kicker{
+  display:inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #4b3fd6;
+  background: rgba(126,111,255,.10);
+  border: 1px solid rgba(126,111,255,.18);
+  margin-bottom: 10px;
+}
+
+.testimonials-saas-light h2{
+  margin: 0 0 6px 0;
+  color: #111827;
+}
+
+.testimonials-saas-light p{
+  margin: 0;
+  color: #6b7280;
+}
+
+.saas-testimonials-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 992px){
+  .saas-testimonials-grid{ grid-template-columns: 1fr; }
+}
+
+.saas-t-card{
+  border-radius: 16px;
+  padding: 14px 14px 12px 14px;
+  background: #ffffff;
+  border: 1px solid rgba(17,24,39,.08);
+  box-shadow: 0 10px 28px rgba(17,24,39,.06);
+  height: 100%;
+}
+
+.saas-t-top{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.saas-t-id{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.saas-avatar{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(17,24,39,.10);
+}
+
+.saas-t-meta{
+  min-width: 0;
+}
+
+.saas-t-meta strong{
+  display:block;
+  font-size: 13px;
+  color: #111827;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.saas-t-meta span{
+  display:block;
+  font-size: 12.5px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.saas-stars{
+  color: rgba(255, 176, 0, .95);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.saas-quote{
+  color: #374151;
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0 0 12px 0;
+
+  /* deixa sucinto: corta em 3 linhas */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.saas-t-footer{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid rgba(17,24,39,.06);
+  padding-top: 10px;
+}
+
+.saas-tag{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  font-size: 12px;
+  color: #4b5563;
+  background: rgba(126,111,255,.08);
+  border: 1px solid rgba(126,111,255,.14);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.saas-verified{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.saas-verified i{
+  color: #7e6fff;
+}
+
+/* Card com acento sutil e hover SaaS */
+.saas-t-card{
+  position: relative;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.saas-t-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  padding:1px;
+  background: linear-gradient(135deg, rgba(126,111,255,.35), rgba(0,180,255,.18), rgba(17,24,39,.06));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+  opacity:.55;
+}
+
+.saas-t-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(17,24,39,.10);
+  border-color: rgba(126,111,255,.20);
+}
