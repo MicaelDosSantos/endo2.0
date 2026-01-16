@@ -2931,3 +2931,15 @@ section,
   box-shadow: 0 14px 40px rgba(17,24,39,.10);
   border-color: rgba(126,111,255,.20);
 }
+
+.stat-value{
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+.stat-prefix,.stat-suffix{
+  font-size: 22px;
+  opacity: .85;
+  margin: 0 4px;
+}
