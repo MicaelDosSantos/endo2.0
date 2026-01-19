@@ -2943,3 +2943,109 @@ section,
   opacity: .85;
   margin: 0 4px;
 }
+
+/* =========================================
+   MENU MOBILE – PADRAO CLARO (igual desktop)
+   ========================================= */
+
+:root{
+  --ef-header-h: 78px;
+  --ef-purple: #7e6fff; /* roxo EndoFlow */
+}
+
+@media (max-width: 1199px){
+
+  /* Overlay neutro (leve, igual SaaS) */
+  body.mobile-nav-active .navmenu{
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    z-index: 1050 !important;
+
+    background: rgba(15, 15, 25, 0.30) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* Card do menu (branco, clean) */
+  body.mobile-nav-active .navmenu > ul{
+    position: absolute !important;
+    top: calc(var(--ef-header-h) + 12px) !important;
+    left: 16px !important;
+    right: 16px !important;
+    bottom: auto !important;
+
+    max-height: calc(100dvh - var(--ef-header-h) - 90px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    margin: 0 !important;
+    padding: 16px !important;
+
+    background: rgba(255,255,255,0.96) !important;
+    border: 1px solid rgba(2,6,23,0.06);
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(2, 6, 23, 0.20);
+  }
+
+  /* Links: mesma leitura do desktop */
+  body.mobile-nav-active .navmenu a{
+    color: rgba(2, 6, 23, 0.88) !important;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+  }
+
+  /* Hover/active roxo */
+  body.mobile-nav-active .navmenu a:hover,
+  body.mobile-nav-active .navmenu .active{
+    color: var(--ef-purple) !important;
+  }
+
+  /* espaçamento clean entre itens */
+  body.mobile-nav-active .navmenu li + li{
+    margin-top: 10px;
+  }
+
+  /* CTA: Entrar (outline) */
+  body.mobile-nav-active .navmenu .btn-login,
+  body.mobile-nav-active .navmenu a.btn-login{
+    width: 100%;
+    border-radius: 999px;
+    padding: 12px 16px;
+    border: 1px solid rgba(126, 111, 255, 0.55) !important;
+    background: transparent !important;
+    color: rgba(2, 6, 23, 0.85) !important;
+    font-weight: 700;
+  }
+
+  /* CTA: Começar grátis (filled) */
+  body.mobile-nav-active .navmenu .btn-getstarted,
+  body.mobile-nav-active .navmenu a.btn-getstarted{
+    width: 100%;
+    border-radius: 999px;
+    padding: 12px 16px;
+
+    background: linear-gradient(135deg, #8b5cf6, #6366f1) !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: 800;
+    box-shadow: 0 14px 30px rgba(126, 111, 255, 0.32);
+  }
+
+  /* X com visual mais “clean” */
+  body.mobile-nav-active .mobile-nav-toggle{
+    position: fixed !important;
+    top: 18px !important;
+    right: 18px !important;
+    z-index: 1051 !important;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.90);
+    border: 1px solid rgba(2,6,23,0.06);
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+  }
+}
+
